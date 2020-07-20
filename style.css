@@ -246,6 +246,10 @@
   .btn:hover {
     background: var(--secondary-color);
   }
+
+  #link:hover{
+    color: #00ad5f;
+  }
   
   .overlay {
     height: 100%;
