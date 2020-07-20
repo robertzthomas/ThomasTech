@@ -47,3 +47,27 @@
     }
 
     })(jQuery);
+
+    var firstName  = document.getElementById("firstName"),
+    lastName = document.getElementById("lastName")
+    email   = document.getElementById("email"),
+    number  = document.getElementById("number"),
+    message = document.getElementById("message"),
+    submit  = document.getElementById("submit");
+    newsletterEmail = document.getElementById("newsletterEmail")
+    
+  function submissionValidation(){
+      if(!email.value && !number.value && !firstName.value && !lastName.value && !message.value){
+        alert("oops! looks like you tried sending a form without any input. please enter your name and email.")
+      } else if(!email.value){
+      alert("Please enter your email address");
+  }   else if(!firstName.value) {
+      alert("Please enter your first name");
+  } else if(!lastName.value) {
+    alert("Please enter your last name");
+  }else if(number.value && number.value.length < 10 || number.value.length > 13){
+      alert("Please make sure you enter a 10 digit phone number.  example: (123) 456-7890");
+  }   else{
+      alert("Thank you for your interest in Thomas Technology. A developer or representative will be in touch soon!");
+  }
+  }
